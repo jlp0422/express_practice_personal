@@ -22,6 +22,7 @@ app.use((req, res, next) => {
 
 app.use('/experience', require('./routes/experience'));
 app.use('/resume', require('./routes/resume'))
+app.use('/about', require('./routes/about'));
 
 app.get('/', (req, res, next) => {
   res.render('index.html', { title: 'Home', pageTitle: 'Jeremy Philipson' })

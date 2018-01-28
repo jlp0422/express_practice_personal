@@ -18,6 +18,9 @@
         <a class="nav-link {%if path === '/'%}active{% endif %}" href="/" style="{% if path === '/' %}font-weight:bold {%endif %}">Home</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link {%if path === '/about'%}active{% endif %}" href="/about" style="{% if path === '/about' %}font-weight:bold {%endif %}">About</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link
         {% set regExp = r/experience\/?\d?/ %}
         {%if regExp.test(path)%}active{% endif %}
