@@ -12,11 +12,12 @@ app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
+app.use('/vendor', express.static(path.join(__dirname, 'css')));
+
 
 // must go before any routers
 app.use((req, res, next) => {
   res.locals.path = req.url;
-  // console.log(res.locals.path)
   next();
 })
 
