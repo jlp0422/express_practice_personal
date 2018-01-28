@@ -25,7 +25,7 @@ app.use('/resume', require('./routes/resume'))
 app.use('/about', require('./routes/about'));
 
 app.get('/', (req, res, next) => {
-  res.render('index.html', { title: 'Home', pageTitle: 'Jeremy Philipson' })
+  res.render('index.html', { title: 'Jeremy Philipson | Home', pageTitle: 'Jeremy Philipson' })
 })
 
 app.listen(port, () => {
