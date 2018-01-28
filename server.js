@@ -12,13 +12,16 @@ app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
-app.use('/experience', require('./routes/experience'))
 
+// must go before any routers
 app.use((req, res, next) => {
   res.locals.path = req.url;
   // console.log(res.locals.path)
   next();
 })
+
+app.use('/experience', require('./routes/experience'));
+app.use('/resume', require('./routes/resume'))
 
 app.get('/', (req, res, next) => {
   res.render('index.html', { title: 'Home', pageTitle: 'Jeremy Philipson' })
