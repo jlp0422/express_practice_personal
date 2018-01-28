@@ -1,0 +1,9 @@
+{% extends './layout.html' %}
+
+{% block content %}
+<ul>
+  {% for job in jobs %}
+  <li><a href="/experience/{{job.id}}">{{ job.role }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
