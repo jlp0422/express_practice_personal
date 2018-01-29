@@ -13,6 +13,7 @@ app.engine('html', nunjucks.render);
 
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
 app.use('/vendor', express.static(path.join(__dirname, 'css')));
+app.use('/vendor', express.static(path.join(__dirname, 'images')));
 
 
 // must go before any routers
