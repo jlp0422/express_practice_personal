@@ -6,7 +6,9 @@
 
   <li class="list-group-item"
     style="{% if job.logo === '../vendor/wfc_logo.png' %}padding-top:25px;padding-bottom:25px;{% endif %}{% if job.logo === '../vendor/chiefs_logo.png' %}padding-top:25px;padding-bottom:25px;{% endif %}">
-    <a href="/experience/{{job.id}}"><img src="{{job.logo}}" alt=""{% if job.logo === '../vendor/wfc_logo.png' %}height="20px"{% endif %}{% if job.logo === '../vendor/chiefs_logo.png' %}height="20px"{% endif %} width="50px"></a>
+    <a href="/experience/{{job.id}}">
+      <img src="{{job.logo}}" alt=""{% if job.logo === '../vendor/wfc_logo.png' %}height="20px"{% endif %}{% if job.logo === '../vendor/chiefs_logo.png' %}height="20px"{% endif %} width="50px">
+    </a>
     <a style="padding-left:10px;" href="/experience/{{job.id}}">{{ job.role }}</a>
   </li>
   {% endfor %}
